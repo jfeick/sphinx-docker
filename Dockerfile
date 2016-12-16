@@ -1,4 +1,5 @@
 FROM debian:stable-slim
+
 MAINTAINER Jan Frederick Eick <jan-frederick.eick@uni-weimar.de>
 
 RUN apt-get update && apt-get install --yes --no-install-recommends \
