@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM ubuntu:15.10
 
 MAINTAINER Jan Frederick Eick <jan-frederick.eick@uni-weimar.de>
 
@@ -11,7 +11,9 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
         python-pil \
         texlive \
         texlive-fonts-recommended \
-        texlive-lang* \
+        texlive-lang-german \
+        texlive-lang-cyrillic \
+        texlive-lang-english \
         texlive-latex-extra \
         texlive-latex-recommended \
         wget \
