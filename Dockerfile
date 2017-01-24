@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 
 MAINTAINER Jan Frederick Eick <jan-frederick.eick@uni-weimar.de>
 
@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
         make \
         git \
         curl \
-        python-pip \
-        python-pil \
+        python3-pip \
+        python3-pil \
         texlive \
         texlive-fonts-recommended \
         texlive-lang-german \
@@ -19,6 +19,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
         wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install Sphinx sphinx_bootstrap_theme sphinx_rtd_theme alabaster recommonmark
+RUN pip3 install Sphinx sphinx_bootstrap_theme sphinx_rtd_theme alabaster recommonmark
 RUN mkdir /doc && chmod 755 /doc
 WORKDIR /doc
